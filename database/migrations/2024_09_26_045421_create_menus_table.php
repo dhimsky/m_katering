@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('type')->constrained();
-            $table->foreignId('location')->constrained();
+            $table->foreignId('type_id')->constrained();
+            $table->foreignId('location_id')->constrained();
             $table->string('name');
             $table->string('image')->nullable();
             $table->decimal('price', 8, 2);
